@@ -1,30 +1,10 @@
-import { lazy, Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import routes from "./config";
-import { Styles } from "../styles/styles";
+import { createRootRoute, createRouter } from "@tanstack/react-router";
+import Home from "@/pages/Home";
 
-const Router = () => {
-  return (
-    <Suspense fallback={null}>
-      <Styles />
-      <Header />
-      <Switch>
-        {routes.map((routeItem) => {
-          return (
-            <Route
-              key={routeItem.component}
-              path={routeItem.path}
-              exact={routeItem.exact}
-              component={lazy(() => import(`../pages/${routeItem.component}`))}
-            />
-          );
-        })}
-      </Switch>
-      <Footer />
-    </Suspense>
-  );
-};
+const rootRoute = createRootRoute({
+  component: () => <Home />,
+});
 
-export default Router;
+const routeTree = rootRoute.addChildren([]);
+
+export const router = createRouter({ routeTree });

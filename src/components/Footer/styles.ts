@@ -1,5 +1,5 @@
+import { Link } from "@tanstack/react-router";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
   background: rgb(241, 242, 243);
@@ -16,7 +16,8 @@ export const Title = styled("h4")`
   }
 `;
 
-export const NavLink = styled(Link)`
+// export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   display: block;
   font-size: 1rem;
   margin-bottom: 0.625rem;
@@ -49,7 +50,8 @@ export const Para = styled("div")`
   width: 70%;
 `;
 
-export const Large = styled(Link)`
+// export const Large = styled(Link)`
+export const Large = styled.a`
   font-size: 16px;
   color: #000;
   cursor: pointer;
