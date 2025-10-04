@@ -10,57 +10,14 @@ import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { StyledButton } from "@/common/Button/styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
-
-  const isFormValid = (): boolean => {
-    return (
-      Boolean(values.name?.trim().length > 0) &&
-      Boolean(values.email?.trim().length > 0) &&
-      Boolean(values.message?.trim().length > 0) &&
-      !errors?.email
-    );
-  };
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
+  const { values, errors, handleChange } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
     return <Span>{ErrorMessage}</Span>;
-  };
-
-  // Netlify encoding helper
-  const encode = (data: Record<string, string>) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!isFormValid()) return;
-    // run your existing validation logic
-    handleSubmit(e);
-
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact", // must match hidden input + form name
-          ...values,
-        }),
-      });
-      setModalMessage("Thanks! We’ll be in touch soon.");
-      setModalOpen(true);
-    } catch (error) {
-      console.error("Netlify form submission error:", error);
-      setModalMessage("Something went wrong. Please try again.");
-      setModalOpen(true);
-    }
   };
 
   return (
@@ -76,13 +33,14 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
             <FormGroup
               name="contact"
               method="POST"
-              netlify
               data-netlify="true"
               netlify-honeypot="bot-field"
-              onSubmit={onSubmit}
+              data-netlify-honeypot="bot-field"
+              onSubmit="submit"
             >
               {/* Required hidden input for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" value="contact" />
 
               {/* Honeypot field */}
               <p hidden>
@@ -125,23 +83,14 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <StyledButton type="submit" name="submit">
+                  {t("Submit")}
+                </StyledButton>
               </ButtonContainer>
             </FormGroup>
           </Slide>
         </Col>
       </Row>
-
-      {/* Confirmation Modal */}
-      <Modal
-        open={modalOpen}
-        onOk={() => setModalOpen(false)}
-        onCancel={() => setModalOpen(false)}
-        okText="OK"
-        cancelButtonProps={{ style: { display: "none" } }} // hide cancel
-      >
-        <p>{modalMessage}</p>
-      </Modal>
     </ContactContainer>
   );
 };
