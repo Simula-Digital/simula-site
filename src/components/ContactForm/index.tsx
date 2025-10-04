@@ -26,10 +26,9 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         <Col lg={12} md={12} sm={24} xs={24}>
           <FormGroup
             name="contact"
-            method="post"
             data-netlify="true"
+            onSubmit="submit"
             data-netlify-honeypot="bot-field"
-            onSubmit={(e) => e.preventDefault()}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" value="contact" />
@@ -72,6 +71,23 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </StyledButton>
             </ButtonContainer>
           </FormGroup>
+        </Col>
+        <Col>
+          <form name="contact" data-netlify="true">
+            <p>
+              <label>
+                Name <input type="text" name="name" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Email <input type="email" name="email" />
+              </label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
         </Col>
       </Row>
     </ContactContainer>
