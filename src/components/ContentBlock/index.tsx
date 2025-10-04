@@ -65,7 +65,9 @@ const ContentBlock = ({
                           <Button
                             key={id}
                             color={item.color}
-                            onClick={() => scrollTo("about")}
+                            onClick={() =>
+                              scrollTo(item.target ? item.target : "about")
+                            }
                           >
                             {t(item.title)}
                           </Button>

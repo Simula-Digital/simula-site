@@ -10,7 +10,6 @@ export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
   color: #18216d;
-
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
   }
@@ -132,7 +131,6 @@ export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
   color: #18216d;
-
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
   }
