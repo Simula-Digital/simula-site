@@ -23,3 +23,29 @@ export const StyledButton = styled("button")<{ color?: string }>`
     background-color: #f7d309;
   }
 `;
+export const StyledMobileButton = styled("button")<{ color?: string }>`
+  @media only screen and (max-width: 890px) {
+    display: block;
+
+    background: ${(p) => p.color || "#201FD1"};
+    color: ${(p) => (p.color ? "#201FD1" : "#fff")};
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    border: 1px solid #edf3f5;
+    border-radius: 4px;
+    padding: 6px 0;
+    cursor: pointer;
+    max-width: 110px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #18216d;
+      border: 1px solid #f7d309;
+      background-color: #f7d309;
+    }
+  }
+  display: none;
+`;
