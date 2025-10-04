@@ -76,6 +76,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
             <FormGroup
               name="contact"
               method="POST"
+              netlify
               data-netlify="true"
               netlify-honeypot="bot-field"
               onSubmit={onSubmit}
