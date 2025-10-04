@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "About Simula Digital",
+  "text": "We're web development agency based locally in Orlando, FL. As a small but capable team, we take pride in delivering creative, high-quality solutions tailored to each client. Our focus is on building strong relationships and making digital projects feel personal and approachable.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Who We Are",
+      "content": "Simula Digital is a husband and wife duo who love turning ideas into polished digital experiences. Being small means we're flexible, fast, and invested in every project we take on.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "What We Do",
+      "content": "From custom web design and development to analytics dashboards, mobile apps, and even small games, we help businesses bring their vision to life with practical and innovative technology.",
       "icon": "notes.svg"
     }
   ]

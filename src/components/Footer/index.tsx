@@ -5,49 +5,50 @@ import Container from "../../common/Container";
 
 import i18n from "i18next";
 import {
-  FooterSection,
-  Title,
+  // FooterSection,
+  // Title,
   NavLink,
   Extra,
-  LogoContainer,
-  Para,
-  Large,
-  Chat,
-  Empty,
+  // LogoContainer,
+  // Para,
+  // Large,
+  // Chat,
+  // Empty,
   FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
+  // Language,
+  // Label,
+  // LanguageSwitch,
+  // LanguageSwitchContainer,
+  CompanyFooterText,
 } from "./styles";
 
-interface SocialLinkProps {
-  href: string;
-  src: string;
-}
+// interface SocialLinkProps {
+//   href: string;
+//   src: string;
+// }
 
 const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+  // const handleChange = (language: string) => {
+  //   i18n.changeLanguage(language);
+  // };
 
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        key={src}
-        aria-label={src}
-      >
-        <SvgIcon src={src} width="25px" height="25px" />
-      </a>
-    );
-  };
+  // const SocialLink = ({ href, src }: SocialLinkProps) => {
+  //   return (
+  //     <a
+  //       href={href}
+  //       target="_blank"
+  //       rel="noopener noreferrer"
+  //       key={src}
+  //       aria-label={src}
+  //     >
+  //       <SvgIcon src={src} width="25px" height="25px" />
+  //     </a>
+  //   );
+  // };
 
   return (
     <>
-      <FooterSection>
+      {/* <FooterSection>
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
@@ -109,42 +110,37 @@ const Footer = ({ t }: { t: TFunction }) => {
             </Col>
           </Row>
         </Container>
-      </FooterSection>
+      </FooterSection> */}
       <Extra>
-        <Container border={true}>
+        <Container>
           <Row
             justify="space-between"
             align="middle"
             style={{ paddingTop: "3rem" }}
           >
-            <NavLink to="/">
-              <LogoContainer>
+            <NavLink href="/">
+              <CompanyFooterText>
+                Simula Digital - Software & Design Agency
+              </CompanyFooterText>
+              {/* <LogoContainer>
                 <SvgIcon
                   src="logo.svg"
                   aria-label="homepage"
                   width="101px"
                   height="64px"
                 />
-              </LogoContainer>
+              </LogoContainer> */}
             </NavLink>
             <FooterContainer>
-              <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
+              {/* <SocialLink
                 href="https://www.linkedin.com/in/lasha-kakabadze/"
                 src="linkedin.svg"
               />
               <SocialLink
                 href="https://medium.com/@lashakakabadze/"
                 src="medium.svg"
-              />
-              <a
+              /> */}
+              {/* <a
                 href="https://ko-fi.com/Y8Y7H8BNJ"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,7 +151,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                   src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
                   alt="Buy Me a Coffee at ko-fi.com"
                 />
-              </a>
+              </a> */}
             </FooterContainer>
           </Row>
         </Container>

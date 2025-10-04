@@ -76,7 +76,7 @@ Check the live demo here 👉️ https://landy-web.netlify.app/
 
 ### Installation
 
-You’ll need to have Node 10.16.0 or later version on your local development machine (but it’s not required on the server). I recommend using the latest LTS version.
+You'll need to have Node 10.16.0 or later version on your local development machine (but it's not required on the server). I recommend using the latest LTS version.
 
 To create a new app, you have to:
 

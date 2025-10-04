@@ -170,3 +170,12 @@ export const LanguageSwitchContainer = styled("div")`
   justify-content: space-between;
   width: 85px;
 `;
+
+export const CompanyHeaderText = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+`;
+
+export const CompanyFooterText = styled.div`
+  font-weight: bold;
+`;

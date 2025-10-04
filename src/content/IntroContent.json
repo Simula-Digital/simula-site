@@ -1,12 +1,13 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Simula Digital Web Dev Agency in Orlando, FL",
+  "text": "We're a small but capable team based in Orlando, Florida, helping businesses and startups bring their ideas to life. From custom web design and development to analytics dashboards, mobile apps, and even small interactive games, we craft digital solutions that are both creative and functional.",
   "button": [
     {
-      "title": "Explore"
+      "title": "About us",
+      "target": "about"
     },
     {
-      "title": "Learn more",
+      "title": "Get in Touch",
       "color": "#fff"
     }
   ]
