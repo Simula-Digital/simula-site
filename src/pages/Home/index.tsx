@@ -121,7 +121,7 @@ const Home = () => {
         <a href="https://johnpcorreia.com" target="_blank">
           <StyledBannerImage src={JohnBanner} />
         </a>
-        <a>
+        <a href="https://kristinbusitzky.com" target="_blank">
           <StyledBannerImage src={KristinBanner} />
         </a>
       </StyledDust>
