@@ -18,7 +18,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
+        font-family: 'Poppins', 'Motiva Sans Light', sans-serif;
     }
 
 
@@ -27,8 +27,9 @@ export const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
-        background: #fff;
+        background: #0001f4;
         overflow-x: hidden;
+        color: #ffffff;
     }
 
     a:hover {
@@ -41,13 +42,15 @@ export const Styles = createGlobalStyle`
         border: 0;
         background: rgb(241, 242, 243);
         transition: all 0.3s ease-in-out;  
+        color: #171717;
         outline: none;
         width: 100%;  
         padding: 1rem 1.25rem;
 
         :focus-within {
+        color: #fff;
             background: none;
-            box-shadow: #201FD1 0px 0px 0px 1px;
+            box-shadow: #fff 0px 0px 0px 1px;
         }
     }
 
@@ -57,9 +60,9 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
-        color: #201FD1;
-        font-size: 56px;
+        font-family: 'Poppins', 'Motiva Sans Bold', serif;
+        color: #ffffff;
+        font-size: 48px;
         line-height: 1.18;
 
         @media only screen and (max-width: 890px) {
@@ -72,12 +75,17 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: black;
-        font-size: 21px;        
+        color: #fff;
+        font-size: 20px;        
         line-height: 1.41;
     }
 
     h1 {
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 40px;
         font-weight: 600;
     }
 
@@ -108,5 +116,9 @@ export const Styles = createGlobalStyle`
 
     .ant-drawer-content-wrapper {
         width: 300px !important;
+    }
+
+    .sub-color {
+        color: #d4d9ff;
     }
 `;

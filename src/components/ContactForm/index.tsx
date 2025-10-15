@@ -140,7 +140,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         okText="OK"
         cancelButtonProps={{ style: { display: "none" } }} // hide cancel
       >
-        <p>{modalMessage}</p>
+        <p style={{ color: "black" }}>{modalMessage}</p>
       </Modal>
     </ContactContainer>
   );

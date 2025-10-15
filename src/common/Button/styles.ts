@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledButton = styled("button")<{ color?: string }>`
-  background: ${(p) => p.color || "#201FD1"};
-  color: ${(p) => (p.color ? "#201FD1" : "#fff")};
+  background: ${(p) => p.color || "#0001f4"};
+  color: ${(p) => (p.color ? "#0001f4" : "#fff")};
   font-size: 1rem;
   font-weight: 700;
   width: 100%;
-  border: 1px solid #edf3f5;
+  border: 1px solid #fff;
   border-radius: 4px;
   padding: 13px 0;
   cursor: pointer;
@@ -18,9 +18,9 @@ export const StyledButton = styled("button")<{ color?: string }>`
   &:hover,
   &:active,
   &:focus {
-    color: #18216d;
-    border: 1px solid #f7d309;
-    background-color: #f7d309;
+    color: #0001f4;
+    border: 1px solid #0001f4;
+    background-color: #fff;
   }
 `;
 export const StyledMobileButton = styled("button")<{ color?: string }>`
@@ -42,9 +42,9 @@ export const StyledMobileButton = styled("button")<{ color?: string }>`
     &:hover,
     &:active,
     &:focus {
-      color: #18216d;
-      border: 1px solid #f7d309;
-      background-color: #f7d309;
+      color: #0001f4;
+      border: 1px solid #0001f4;
+      background-color: #fff;
     }
   }
   display: none;
